@@ -1,0 +1,56 @@
+{
+  "name": "SearcherAPI",
+  "version": "1.0.0",
+  "description": "Sample project to utilize github search api and MongoDb",
+  "main": "server.js",
+  "scripts": {
+    "regression": "NODE_PATH=. istanbul cover _mocha -- -R spec test/regression/*",
+    "start": "pm2 stop pm2.json && pm2 delete pm2.json && pm2 start pm2.json",
+    "stop": "pm2 stop pm2.json && pm2 delete pm2.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnxy84/SearcherAPI.git"
+  },
+  "keywords": [
+    "node",
+    "github",
+    "users",
+    "mongodb"
+  ],
+  "author": "John",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnxy84/SearcherAPI.git"
+  },
+  "homepage": "https://github.com/johnxy84/SearcherAPI.git#readme",
+  "dependencies": {
+    "bcrypt": "2.0.0",
+    "custom-error-generator": "7.0.0",
+    "express": "4.16.3",
+    "express-joi-validation": "0.2.1",
+    "express-validator": "5.2.0",
+    "http-status": "1.2.0",
+    "joi": "13.1.2",
+    "jsonwebtoken": "8.2.1",
+    "mongoose": "5.0.12",
+    "mongoose-hidden": "1.5.3",
+    "mongoose-search-plugin": "0.1.2",
+    "mongoose-string-query": "0.2.5",
+    "mongoose-timestamp": "0.6.0",
+    "mongoose-timestamp-date-unix": "0.6.2",
+    "nock": "^9.4.3",
+    "pm2": "^3.0.2",
+    "request": "2.87.0",
+    "request-promise": "^4.2.2",
+    "shortid": "2.2.12",
+    "winston": "2.4.1"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "istanbul": "0.4.5",
+    "mocha": "3.1.2",
+    "nodemon": "^1.18.3",
+    "supertest": "2.0.0"
+  }
+}

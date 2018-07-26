@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  backend:
+    container_name: searcher_api
+    build: .
+    ports:
+     - "6969"
+    networks: 
+      - network
+
+  mongo:
+    container_name: searcher_mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks: 
+      - network
+
+networks:
+    network:
+        driver: bridge
